@@ -828,7 +828,7 @@ const fn get_replacements() -> [u8; 256] {
     }
     result[b'\"' as usize] = b'"';
     result[b'\\' as usize] = b'\\';
-    result[b'/' as usize] = b'/';
+    // result[b'/' as usize] = b'/';  <-- do not escape forward slashes
     result[8] = b'b';
     result[0xc] = b'f';
     result[b'\n' as usize] = b'n';
